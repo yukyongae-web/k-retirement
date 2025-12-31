@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: #050a15;
+    --accent-cyan: #00f2ff;
+    --accent-red: #ff2e4d;
+  }
+
+  body {
+    @apply font-pretendard antialiased transition-colors duration-300;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/10 dark:bg-black/20 backdrop-blur-md border border-white/20 dark:border-white/10 rounded-2xl;
+  }
+  
+  .glow-text {
+    @apply text-accent-cyan drop-shadow-[0_0_8px_rgba(0,242,255,0.8)];
+  }
+
+  .neon-button {
+    @apply px-6 py-2 rounded-full font-bold transition-all duration-300 
+           border-2 border-accent-cyan text-accent-cyan hover:bg-accent-cyan hover:text-primary-bg
+           dark:border-accent-cyan dark:text-accent-cyan dark:hover:shadow-[0_0_15px_rgba(0,242,255,0.5)];
+  }
+}
